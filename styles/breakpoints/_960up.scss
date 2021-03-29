@@ -1,0 +1,146 @@
+// 幅960px以上で適用
+
+.content-width {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.header {
+    &__nav {
+        display: block;
+    }
+}
+
+.mobile-menu {
+    &__btn {
+        display: none;
+    }
+}
+
+.swiper-slide {
+    box-shadow: 0 8px 40px -10px rgba(0,0,0,0.8);
+}
+
+.about {
+    &__inner {
+        flex-direction: row;
+    }
+
+    &__img {
+        flex-basis: 50%;
+        height: auto;
+    }
+
+    &__texts {
+        flex-basis: 50%;
+    }
+}
+
+.course {
+    & .caption {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__title {
+        flex-basis: 40%;
+    }
+
+    &__img {
+        flex-basis: 60%;
+        align-self: center;
+    }
+
+    & .texts {
+        display: flex;
+        flex-direction: row;
+    }
+
+    & .subject {
+        flex-basis: 50%;
+        flex-direction: column;
+    }
+
+    & .description {
+        flex-basis: 50%;
+    }
+
+    & .sentence {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+
+    &__A {
+        .subject {
+            @include bg-puzzle(
+                $width: 100%,
+            ) {
+
+            }
+        }
+
+        .description {
+            @include bg-puzzle(
+                $width: 100%,
+            ) {
+
+            }
+        }
+    }
+
+    &__B {
+
+        & .course__title {
+            order: 2;
+        }
+
+        & .course__img {
+            order: 1;
+        }
+
+        & .course__menu-title {
+            order: 1
+        }
+        
+        & .course__menu-list {
+            order: 2;
+        }
+
+        & .subject {
+            order: 2;
+        }
+
+        & .description {
+            order: 1;
+        }
+    }
+}
+
+.price {
+    &__texts {
+        justify-content: center;
+    }
+}
+
+
+.footer {
+    &__li {
+      justify-content: flex-start;
+    }
+}
+
+.flow {
+    &__items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &__part {
+        flex-basis: 50%;
+    }
+}

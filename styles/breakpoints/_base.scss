@@ -1,0 +1,628 @@
+// ファイルサイズのベース
+
+body {
+    font-family: 'Merriweather', serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+p {
+    margin: 0;
+}
+
+.font-mini {
+    font-size: 10px;
+}
+
+.font-sm {
+    font-size: 13px; 
+}
+
+.font-md {
+    font-size: 13px;
+}
+
+.font-lr {
+    font-size: 18px;
+}
+
+.font-lg {
+    font-size: 25px;
+}
+
+.font-ex {
+    font-size: 95px;
+}
+
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.pt-sm {
+    padding-top: 16px !important;
+}
+
+.pt-lg {
+    padding-top: 80px !important;
+}
+
+.content-width {
+    width: 100%;
+    padding: 0;
+}
+
+.section-color {
+    background-color: $cSection;
+}
+
+.nav-t-a {
+    position: relative;
+    top: $nav-aHeight;
+    display: block;
+}
+
+
+.main-title {
+    @extend .font-lg;
+    font-weight: 550;
+    margin-bottom: 0;
+    display: block;
+}
+
+.sub-title {
+    @extend .font-sm;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-content {
+    position: relative;
+    z-index: 0;
+}
+
+main {
+    position: relative;
+    z-index: -1;
+}
+
+#container {
+    background-color: #f5f5f5;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: $navHeight;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+
+    &.triggered {
+        background-color: rgba(255,255,255,0.9);
+        box-shadow: 10px 0 25px -10px rgba(0,0,0,0.5);
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__li {
+        margin-left: 20px;
+
+        & > a {
+            font-family: $fEng;
+            text-decoration: none !important;
+        }
+    }
+
+    & .logo {
+        justify-content: center;
+        padding-left: 15px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend .content-width;
+    }
+}
+
+.about {
+    @extend .content-width;
+    @extend .pb-lg;
+    @extend .section-color; 
+
+    &__nav-top {
+        @extend .nav-t-a;
+    }
+
+    &__inner {
+        @extend .flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 0;
+    }
+
+    &__secTitle {
+        @extend .mb-sm;
+        background-color: $bgTitle;
+        color: $cWhite;
+        padding-left: 15px;
+
+        & > h2 {
+            font-family: $fEng;
+            padding-right: 10px;
+        }
+    }
+
+    &__description {
+        color: #800000;
+        line-height: 2.5;
+        @extend .pb-lg;
+
+        & > h2 {
+            @extend .font-lr;
+        }
+
+        & > p {
+            @extend .font-sm;
+        }
+    }
+
+    &__img {
+        height: 300px;
+        transition: box-shadow 1ms linear 0.8s;
+
+        & > img {
+            position: relative;
+            z-index: -1;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        &.inview {
+            box-shadow: inset 0 0 30px $cBlack;
+        }
+    }
+
+    &__texts {
+        @extend .pb-sm;
+        @extend .pt-lg;
+        position: relative;
+
+        @include bg-puzzle(
+            $height: 100%,
+        ){
+            background-color: #ff7f50;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        &.inview {
+            & .about__title::before {
+                transform: translateY(-50%);
+            }
+        }
+
+        &-inner {
+            text-align: center;
+        }
+    }
+
+
+    &__btn {
+        @extend .pb-sm;
+    }
+
+}
+
+.course {
+    @extend .content-width;
+    @extend .pb-sm;
+    @extend .section-color;
+
+    &__nav-top {
+        @extend .nav-t-a;
+    }
+
+    &__secTitle {
+        background-color: $bgTitle;
+        color: $cWhite;
+        padding-left: 15px;
+
+        & > h2 {
+            font-family: $fEng;
+        }
+    }
+
+    &__inner {
+        @extend .flex;
+    }
+
+    &__class {
+        @extend .pb-lg;
+    }
+
+    & .texts {
+        text-align: center;
+    }
+
+    & .texts-box {
+        color: #800000;        
+    }
+
+    & .subject {
+        @extend .pb-sm;
+        @extend .pt-sm;
+    }
+
+    &__menu-title {
+        @extend .pb-sm;
+        font-family: $fEng;
+    }
+
+    & .description {
+        line-height: 2.5;
+        @extend .font-sm;
+        position: relative;
+
+        @include bg-puzzle(
+            $width: 100%,
+            $height: 100%
+        ){
+            background-color: #ff4500;
+            z-index: 0;
+            opacity: 0.3;
+        }
+    }
+
+    & .sentence {
+        padding: 15px;
+    }
+
+    & .preamble {
+        display: inline-block;
+        position: relative;
+        @include bg-puzzle(
+            $width: 78%,
+            $height: 2px,
+            $left: 50%,
+            $top: auto,
+            $display: inline-block,
+        ){
+            opacity: 0.3;
+            background-color: #696969;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+    }
+
+    &__menu-list {
+        @extend .pb-sm;
+        padding: 0;
+    }
+
+    & li {
+        @extend .pt-sm;
+        @extend .font-lr;
+    }
+
+    &__A {
+        border-bottom: 10px dotted #ff6347;
+
+        .subject {
+            position: relative;
+            @include bg-puzzle(
+                $width: 100%,
+                $height: 100%
+            ){
+                background-color: #800000;
+                z-index: 0;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &__B {
+        .subject {
+            position: relative;
+            @include bg-puzzle(
+                $width: 100%,
+                $left: auto
+            ){
+                right: 0;
+                background-color: #800000;
+                z-index: 0;
+                opacity: 0.3;
+            }
+        }
+        
+    }
+
+    &__title {
+        @extend .pb-sm;
+        @extend .font-md;
+        @extend .flex;
+        align-items: center;
+        font-weight: 700;
+        color: #a52a2a;
+
+        & > span {
+            @extend .font-ex;
+            font-family: $fEng;
+        }
+    }
+
+    &__btn {
+        text-align: center;
+    }
+
+}
+
+.price {
+    @extend .content-width;
+    @extend .pb-lg;
+    @extend .section-color;
+
+    &__nav-top {
+        @extend .nav-t-a;
+    }
+
+    &__secTitle {
+        background-color: $bgTitle;
+        color: $cWhite;
+        padding-left: 15px;
+
+        & > h2 {
+            font-family: $fEng;
+        }
+    }
+    
+    & .texts-item {
+        @extend .pb-lg;
+    }
+
+    &__point {
+        text-decoration: underline;
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        @extend .font-md;
+        color: #cc0033;
+
+        position: relative;
+        @include bg-puzzle(
+            $top: -25%,
+        ) {
+            background-color: #ffff00;
+            opacity: 0.3;
+            z-index: 0;
+        }
+    }
+
+    &__content {
+        @extend .flex;
+    }
+
+    &__texts {
+        @extend .flex;
+        align-items: center;
+        color: #800000;
+    }
+
+    &__menu-title {
+        @extend .flex;
+        @extend .mb-sm;
+
+        & > .sub-title {
+            text-align: center;
+        }
+    }
+
+    &__table {
+        width: 90%;
+        @extend .font-sm;
+        @extend .mb-sm;
+    }
+
+    &__attention {
+        @extend .font-mini;
+    }
+
+    &__img {
+        @extend .mb-lg;
+    }
+
+    &__btn {
+        text-align: center;
+    }
+}
+
+.flow {
+    @extend .content-width;
+    @extend .pb-lg;
+    @extend .section-color;
+
+    &__nav-top {
+        @extend .nav-t-a;
+    }
+
+    &__secTitle {
+        background-color: $bgTitle;
+        color: $cWhite;
+        padding-left: 15px;
+
+        & > h2 {
+            font-family: $fEng;
+        }
+    }
+
+    &__inner {
+        @extend .flex;
+        align-items: center;
+    }
+
+    &__texts {
+        color:#800000;
+    }
+
+    &__items {
+        @extend .flex;
+        @extend .pt-lg;
+        align-items: center;
+    }
+
+    &__part {
+        @extend .flex;
+        @extend .pb-lg;
+        flex-basis: 100%;
+    }
+
+    & .circle {
+        width: 250px;
+        height: 250px;
+        background-color: #ffdab9;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        width: 70%;
+        height: 70%;
+        overflow: hidden;
+
+        & > img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    & .step1 {
+        object-position: top;
+    }
+
+    & .step2 {
+        object-position: top;
+    }
+
+    & .step3 {
+        object-position: right;
+    }
+
+    & .step4 {
+        object-position: 65%;
+    }
+
+    & .step-title {
+        @extend .pb-sm;
+        @extend .flex;
+        align-items: center;
+
+        & .sub-title {
+            @extend .pt-sm;
+        }
+    }
+
+    & .step-description {
+        @extend .pt-sm;
+        @extend .font-sm;
+        text-align: center;
+    }
+    
+    
+}
+
+.footer {
+    @extend .content-width;
+    padding: 60px 0;
+
+    &__nav {
+        @extend .flex;
+        @extend .font-md;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__ul {
+        @extend .flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__li {
+        padding: 0;
+        margin: 15px;
+
+        & > a {
+            color: #800000;
+            font-family: $fEng;
+        }
+    }
+
+    & .logo {
+        justify-content: center;
+    }
+
+    &__copyright {
+        font-family: $fEng;
+    }
+}
+
+
+.logo {
+    font-size: 33px;
+    display: flex;
+    font-family: 'Akaya Telivigala', cursive;
+
+    &__salon {
+        color: $cSalon;
+    }
+
+    &__Misomaru {
+        color: $cMisomaru;
+    }
+}
+
