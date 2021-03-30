@@ -1620,10 +1620,6 @@ main {
   .price__menu-title > .main-title {
     font-size: 30px;
   }
-  .price__btn {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
   .flow .circle {
     width: 380px;
     height: 380px;
