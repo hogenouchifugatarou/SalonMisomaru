@@ -1512,7 +1512,7 @@ main {
     -ms-flex-preferred-size: 65%;
         flex-basis: 65%;
     list-style-position: inside;
-    list-style-image: url("../../images/footPrints.png");
+    list-style-image: url("../images/footPrints.png");
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
