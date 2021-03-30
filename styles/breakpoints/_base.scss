@@ -299,7 +299,7 @@ main {
 
     & .description {
         line-height: 2.5;
-        @extend .font-sm;
+        @extend .font-vertical;
         position: relative;
 
         @include bg-puzzle(
@@ -313,6 +313,8 @@ main {
     }
 
     & .sentence {
+        // @extend .font-sentence;
+        font-family: $fSentence;
         padding: 15px;
     }
 
