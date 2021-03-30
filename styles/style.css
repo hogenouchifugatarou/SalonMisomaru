@@ -908,7 +908,7 @@ p {
   font-size: 10px;
 }
 
-.font-sm, .sub-title, .about__description > p, .course .description, .price__table, .flow .step-description {
+.font-sm, .sub-title, .about__description > p, .price__table, .flow .step-description {
   font-size: 13px;
 }
 
@@ -926,6 +926,10 @@ p {
 
 .font-ex, .course__title > span {
   font-size: 95px;
+}
+
+.font-vertical, .course .description {
+  font-size: 20px;
 }
 
 .mb-sm, .about__secTitle, .price__menu-title, .price__table {
@@ -1183,6 +1187,7 @@ main {
 }
 
 .course .sentence {
+  font-family: "Shippori Mincho B1", serif;
   padding: 15px;
 }
 
@@ -1474,7 +1479,7 @@ main {
   .font-mini, .price__attention {
     font-size: 12px;
   }
-  .font-sm, .sub-title, .about__description > p, .course .description, .price__table, .flow .step-description {
+  .font-sm, .sub-title, .about__description > p, .price__table, .flow .step-description {
     font-size: 18px;
   }
   .font-md, .course__title, .price__point, .footer__nav {
