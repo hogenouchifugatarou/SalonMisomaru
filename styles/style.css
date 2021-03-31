@@ -928,10 +928,6 @@ p {
   font-size: 95px;
 }
 
-.font-vertical, .course .description {
-  font-size: 20px;
-}
-
 .mb-sm, .about__secTitle, .price__menu-title, .price__table {
   margin-bottom: 16px !important;
 }
@@ -1286,20 +1282,6 @@ main {
   margin-top: 60px;
   margin-bottom: 20px;
   color: #cc0033;
-  position: relative;
-}
-
-.price__point::before {
-  display: block;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -25%;
-  left: 0;
-  background-color: #ffff00;
-  opacity: 0.3;
-  z-index: 0;
 }
 
 .price__texts {
@@ -1589,6 +1571,10 @@ main {
         -ms-flex-order: 1;
             order: 1;
   }
+  .price__point-title {
+    border: 10px dotted #ff6347;
+    padding: 30px;
+  }
   .price__content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1787,10 +1773,52 @@ main {
         -ms-flex-order: 1;
             order: 1;
   }
+  .price__point {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .price__point::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../../images/catLeft.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+  }
+  .price__point::after {
+    content: "";
+    display: inline-block;
+    background-image: url("../../images/catRight.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+  }
   .price__texts {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative;
+  }
+  .price__texts::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: auto;
+    right: 10%;
+    background-image: url("../../images/priceBack.png");
+    background-size: cover;
+    z-index: 0;
   }
   .footer__li {
     -webkit-box-pack: start;

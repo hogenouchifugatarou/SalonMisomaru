@@ -102,6 +102,11 @@
 }
 
 .price {
+    &__point-title {
+        border: 10px dotted #ff6347;
+        padding: 30px;
+    }
+
     &__content {
         flex-direction: row;
         flex-wrap: wrap;

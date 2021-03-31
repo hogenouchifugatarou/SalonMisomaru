@@ -299,7 +299,6 @@ main {
 
     & .description {
         line-height: 2.5;
-        @extend .font-vertical;
         position: relative;
 
         @include bg-puzzle(
@@ -313,7 +312,6 @@ main {
     }
 
     & .sentence {
-        // @extend .font-sentence;
         font-family: $fSentence;
         padding: 15px;
     }
@@ -427,15 +425,6 @@ main {
         margin-bottom: 20px;
         @extend .font-md;
         color: #cc0033;
-
-        position: relative;
-        @include bg-puzzle(
-            $top: -25%,
-        ) {
-            background-color: #ffff00;
-            opacity: 0.3;
-            z-index: 0;
-        }
     }
 
     &__content {
