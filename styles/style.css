@@ -1786,7 +1786,7 @@ main {
   .price__point::before {
     content: "";
     display: inline-block;
-    background-image: url("../../images/catLeft.png");
+    background-image: url("../images/catLeft.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 150px;
@@ -1795,7 +1795,7 @@ main {
   .price__point::after {
     content: "";
     display: inline-block;
-    background-image: url("../../images/catRight.png");
+    background-image: url("../images/catRight.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 150px;
@@ -1816,7 +1816,7 @@ main {
     top: 0;
     left: auto;
     right: 10%;
-    background-image: url("../../images/priceBack.png");
+    background-image: url("../images/priceBack.png");
     background-size: cover;
     z-index: 0;
   }
