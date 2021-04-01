@@ -1313,6 +1313,10 @@ main {
   width: 90%;
 }
 
+.price__table th, .price__table td {
+  text-align: center;
+}
+
 .price__btn {
   text-align: center;
 }
@@ -1819,8 +1823,6 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-image: url("../images/priceBack.png");
-    background-size: cover;
   }
   .footer__li {
     -webkit-box-pack: start;

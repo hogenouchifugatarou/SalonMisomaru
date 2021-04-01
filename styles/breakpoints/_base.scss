@@ -458,6 +458,10 @@ main {
         width: 90%;
         @extend .font-sm;
         @extend .mb-sm;
+
+        & th,td {
+            text-align: center;
+        }
     }
 
     &__attention {
