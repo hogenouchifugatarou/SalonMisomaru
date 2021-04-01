@@ -932,7 +932,7 @@ p {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .price__img {
+.mb-lg {
   margin-bottom: 80px !important;
 }
 
@@ -940,7 +940,7 @@ p {
   padding-bottom: 16px !important;
 }
 
-.pb-lg, .hero, .about, .about__description, .course__class, .price, .price .texts-item, .flow, .flow__part {
+.pb-lg, .hero, .about, .about__description, .course__class, .price, .price__texts, .flow, .flow__part {
   padding-bottom: 80px !important;
 }
 
@@ -948,7 +948,7 @@ p {
   padding-top: 16px !important;
 }
 
-.pt-lg, .about__texts, .flow__items {
+.pt-lg, .about__texts, .price__texts, .price__btn, .flow__items {
   padding-top: 80px !important;
 }
 
@@ -1280,8 +1280,8 @@ main {
   text-decoration: underline;
   text-align: center;
   margin-top: 60px;
-  margin-bottom: 20px;
-  color: #cc0033;
+  margin-bottom: 60px;
+  color: #ba2636;
 }
 
 .price__texts {
@@ -1289,6 +1289,20 @@ main {
       -ms-flex-align: center;
           align-items: center;
   color: #800000;
+  position: relative;
+}
+
+.price__texts::before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ff4500;
+  z-index: 0;
+  opacity: 0.3;
 }
 
 .price__menu-title > .sub-title {
@@ -1572,8 +1586,8 @@ main {
             order: 1;
   }
   .price__point-title {
-    border: 10px dotted #ff6347;
-    padding: 30px;
+    border: 10px dotted #ec6d51;
+    padding: 17px;
   }
   .price__content {
     -webkit-box-orient: horizontal;
@@ -1805,20 +1819,8 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    position: relative;
-  }
-  .price__texts::before {
-    display: block;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: auto;
-    right: 10%;
     background-image: url("../images/priceBack.png");
     background-size: cover;
-    z-index: 0;
   }
   .footer__li {
     -webkit-box-pack: start;

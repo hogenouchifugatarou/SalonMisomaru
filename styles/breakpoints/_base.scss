@@ -413,18 +413,14 @@ main {
             font-family: $fEng;
         }
     }
-    
-    & .texts-item {
-        @extend .pb-lg;
-    }
 
     &__point {
         text-decoration: underline;
         text-align: center;
         margin-top: 60px;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
         @extend .font-md;
-        color: #cc0033;
+        color: #ba2636;
     }
 
     &__content {
@@ -432,9 +428,21 @@ main {
     }
 
     &__texts {
+        @extend .pt-lg;
+        @extend .pb-lg;
         @extend .flex;
         align-items: center;
         color: #800000;
+        position: relative;
+
+        @include bg-puzzle(
+            $width: 100%,
+            $height: 100%,
+        ){
+            background-color: #ff4500;
+            z-index: 0;
+            opacity: 0.3;
+        }
     }
 
     &__menu-title {
@@ -456,11 +464,8 @@ main {
         @extend .font-mini;
     }
 
-    &__img {
-        @extend .mb-lg;
-    }
-
     &__btn {
+        @extend .pt-lg;
         text-align: center;
     }
 }

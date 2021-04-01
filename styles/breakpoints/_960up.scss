@@ -148,16 +148,8 @@
 
     &__texts {
         justify-content: center;
-        position: relative;
-
-        @include bg-puzzle(
-            $left: auto,
-        ) {
-            right: 10%;
-            background-image: url("../images/priceBack.png");
-            background-size: cover;
-            z-index: 0;
-        }
+        background-image: url("../images/priceBack.png");
+        background-size: cover;
     }
 }
 
