@@ -609,6 +609,12 @@ main {
     &__copyright {
         font-family: $fEng;
     }
+
+    & .btn {
+        border: none;
+        border-bottom: 1px solid $cbtn-b;
+        background-color: #f5f5f5;
+    }
 }
 
 

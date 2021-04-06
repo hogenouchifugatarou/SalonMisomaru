@@ -20,6 +20,7 @@ class Main {
 
   _init() {
     new MobileMenu();
+    new Alert();
     this.hero = new HeroSlider('.swiper-container');
     Pace.on('done',this._paceDone.bind(this));
   }
