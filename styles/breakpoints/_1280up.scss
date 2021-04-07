@@ -3,3 +3,14 @@
 .content-width {
     width: 82%;
 }
+
+.popup {
+    &__img {
+        flex-basis: 50%;
+        display: inline-block;
+    }
+
+    &__text {
+        flex-basis: 50%;
+    }
+}

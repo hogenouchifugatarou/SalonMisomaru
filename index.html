@@ -11,6 +11,7 @@
     <script src="scripts/vendors/pace.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Merriweather:ital@1&family=Noto+Sans+JP&Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css">
     <link rel="stylesheet" href="styles/vendors/swiper.min.css" />
     <link rel="stylesheet" href="styles/style.css">
@@ -395,10 +396,35 @@
                         <li class="footer__li item"><a href="#flow">Flow</a></li>
                     </ul>
                     <div class="footer__copyright item">
-                        <button class="btn float">&copy; kawachi Takahiro</button>
+                        <button class="btn float popup__open">&copy; kawachi Takahiro</button>
                     </div>
                 </nav>
             </footer>
+            <div class="popup">
+                <div class="popup__inner">
+                    <div class="popup__close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="popup__content">
+                        <div class="popup__text">
+                            <p>作成者:&emsp;河内貴弘</p>
+                            <p>概要:&emsp;二つ目のポートフォリオサイト。飼っている愛猫がマッサージ店を」経営したら。という仮定での架空サイト</p>
+                            <p>制作期間:&emsp;約1ヵ月</p>
+                            <p>使用言語:&emsp;HTML・CSS3(scss記法のSASSファイルをコンパイル)・JavaScript(フレームワークは無し)</p>
+                            <p>参考資料:&emsp;オンライン学習サービス「Udemy」 【JavaScript＆CSS】ガチで学びたい人のためのWEB開発徹底実践（フロントエンド編）</p>
+                            <p>ツール:&emsp;gimp(無料画像編集ソフト)</p>
+                            <p>テーマ:&emsp;癒し・高貴・温かみ・愛愛しさ</p>
+                            <p>意識した点:&emsp;テーマに添った色やフォントを意識した。アニメーションも目を引くようにし、サイトを見た人が疲れないようなレイアウトとした。</p>
+                            <p>反省点:&emsp;製作途中、誤ってデータを削除することがあった。gitの世代管理を使用し、過去のコードに戻ることができるため、次回からはこの機能を上手く活用したい。</p>
+                            <p>課題:&emsp;今後はJavascriptのフレームワーク・webpack・gitの学習を進めたい。</p>
+                        </div>
+                        <div class="popup__img">
+                            <img src="./images/kawachi.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__background"></div>
+            </div>
         </div>
         <nav class="mobile-menu">
             <div class="logo">
@@ -441,7 +467,7 @@
     <script src="scripts/libs/scroll.js"></script>
     <script src="scripts/libs/text-animation.js"></script>
     <script src="scripts/libs/hero-slider.js"></script>
-    <script src="scripts/libs/alert.js"></script>
+    <script src="scripts/libs/popup.js"></script>
     <script src="scripts/libs/mobile-menu.js"></script>
     <script src="scripts/main.js"></script>
 </body>
